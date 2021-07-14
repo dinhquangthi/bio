@@ -1,11 +1,11 @@
 @font-face {
   font-family: "glyphs";
-  src: url('../fonts/glyphs.eot?t=1626246686735'); /* IE9*/
-  src: url('../fonts/glyphs.eot?t=1626246686735#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url("../fonts/glyphs.woff2?t=1626246686735") format("woff2"),
-  url("../fonts/glyphs.woff?t=1626246686735") format("woff"),
-  url('../fonts/glyphs.ttf?t=1626246686735') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('../fonts/glyphs.svg?t=1626246686735#glyphs') format('svg'); /* iOS 4.1- */
+  src: url('../fonts/glyphs.eot?t=1626249163397'); /* IE9*/
+  src: url('../fonts/glyphs.eot?t=1626249163397#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url("../fonts/glyphs.woff2?t=1626249163397") format("woff2"),
+  url("../fonts/glyphs.woff?t=1626249163397") format("woff"),
+  url('../fonts/glyphs.ttf?t=1626249163397') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/glyphs.svg?t=1626249163397#glyphs') format('svg'); /* iOS 4.1- */
 }
 
 [class^="glyphs-"], [class*=" glyphs-"] {

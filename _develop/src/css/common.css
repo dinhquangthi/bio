@@ -140,6 +140,125 @@ main {
   height: 100%;
 }
 @media (--pc) {
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow-y: hidden;
+  }
+  .bob {
+    position: relative;
+    background: #f2f2f2;
+    border-radius: 50%;
+    animation: pulse 2s linear infinite;
+  }
+  .st {
+    z-index: 10;
+    &__head {
+      position: relative;
+      padding-top: 60px;
+      padding-bottom: 260px;
+      display: flex;
+      justify-content: center;
+      background-image: linear-gradient(to bottom, #ffce82, #ffbb70, #ffa761, #fe9256, #fd7c4f);
+
+      figure {
+        display: inline-block;
+        img {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          margin: auto;
+          display: block;
+          border: 5px solid #fff;
+        }
+      }
+    }
+    &__middle {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto 0;
+      display: block;
+      border-top-right-radius: 80px;
+      position: relative;
+      &::before {
+        content: '';
+        width: 100%;
+        height: 270px;
+        position: absolute;
+        top: -260px;
+        left: 0;
+        background: url($url/bubble.svg) repeat-x;
+        background-position: top center;
+        background-size: 100% auto;
+        transform: rotate(180deg);
+      }
+
+      ul {
+        height: 100%;
+        padding: 42px 0 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top-left-radius: vw(80);
+        /*  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+        /*    background-color: #f2f2f2; */
+        li {
+          display: block;
+          &:last-child {
+            a {
+              margin-bottom: 0;
+            }
+          }
+          a {
+            position: relative;
+            font-family: $fontchewy;
+            width: 480px;
+            text-align: center;
+            display: block;
+            font-size: 32px;
+            font-weight: 500;
+            color: #fff;
+            line-height: 76px;
+            letter-spacing: vw(3.2);
+            background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+            border-radius: 50px;
+            margin: 0 0 40px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+            transition: ease all .3s;
+            &:hover {
+              transform: translate(5px,-5px);
+              box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
+            .fa {
+              width: 40px;
+              height: 40px;
+              display: inline-block;
+              position: absolute;
+              left: 20px;
+              top: 50%;
+              transform: translateY(-50%);
+              &.fab {
+                background: url($url/facebook.png) no-repeat;
+                background-size: contain;
+                background-position: center;
+              }
+              &.fag {
+                background: url($url/instagram.png) no-repeat;
+                background-size: contain;
+                background-position: center;
+              }
+              &.fas {
+                background: url($url/skype.png) no-repeat;
+                background-size: contain;
+                background-position: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (--sp) {
   .container {
