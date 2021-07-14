@@ -6,10 +6,9 @@ include ./_jsonLD.pug
 
 block meta
   -
-    var title = "サンプル";
-    var description = "説明が入ります";
-    //- var keywords = "a,b,c,d,e"
-    var url = "http://example.co.jp/"
+    var title = "| QUANG . THI |";
+    var description = "";
+    var url = "http://quangthi195.epizy.com/"
 
 block subTitle
   - var pageTitle = ''
@@ -99,6 +98,6 @@ html(lang='ja')
         include ./footer.pug
 
     block script
-      script(src='/' + subDirectory + process.env.npm_package_config_assetPath + '/js/vendor.js', defer)
-      script(src='/' + subDirectory + process.env.npm_package_config_assetPath + '/js/runtime.js', defer)
-      script(src='/' + subDirectory + process.env.npm_package_config_assetPath + '/js/bundle.js', defer)
+      //- script(src='/' + subDirectory + process.env.npm_package_config_assetPath + '/js/vendor.js', defer)
+      //- script(src='/' + subDirectory + process.env.npm_package_config_assetPath + '/js/runtime.js', defer)
+      //- script(src='/' + subDirectory + process.env.npm_package_config_assetPath + '/js/bundle.js', defer)
