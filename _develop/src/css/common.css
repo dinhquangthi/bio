@@ -40,7 +40,7 @@ a {
 .fit {
   width: 100%;
   height: 100%;
-  @mixin objectfit;
+  object-fit: cover;
 
   &--contain {
     @mixin objectfit contain;
@@ -164,7 +164,7 @@ main {
       position: absolute;
       right: 2px;
       bottom: 30px;
-      opacity: .85;
+      opacity:  1;
     }
   }
   .st {
@@ -393,7 +393,7 @@ main {
       position: absolute;
       right: vw(10);
       bottom: vw(22);
-      opacity: .85;
+      opacity:  1;
     }
   }
   .st {
