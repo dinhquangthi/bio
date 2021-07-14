@@ -1,0 +1,260 @@
+@charset "utf-8";
+@import './_config/_mixin.css';
+@import './_config/_fonts.css';
+@import './_config/_media.css';
+@import './_config/_reset.css';
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(242, 242, 242, 0.7), 0 0 0 0 rgba(242, 242, 242, 0.7);
+  }
+  40% {
+    box-shadow: 0 0 0 50px rgba(242, 242, 242, 0), 0 0 0 0 rgba(242, 242, 242, 0.7);
+  }
+  80% {
+    box-shadow: 0 0 0 50px rgba(242, 242, 242, 0), 0 0 0 30px rgba(242, 242, 242, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(242, 242, 242, 0), 0 0 0 30px rgba(242, 242, 242, 0);
+  }
+}
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.fit {
+  width: 100%;
+  height: 100%;
+  @mixin objectfit;
+
+  &--contain {
+    @mixin objectfit contain;
+  }
+}
+.area {
+  background-image: linear-gradient(to bottom, #ffce82, #ffbb70, #ffa761, #fe9256, #fd7c4f);
+  width: 100%;
+  height: 100%;
+}
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    &:nth-child(1) {
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
+    }
+    &:nth-child(2) {
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 2s;
+      animation-duration: 12s;
+    }
+    &:nth-child(3) {
+      left: 70%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 4s;
+    }
+    &:nth-child(4) {
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      animation-delay: 0s;
+      animation-duration: 18s;
+    }
+    &:nth-child(5) {
+      left: 65%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 0s;
+    }
+    &:nth-child(6) {
+      left: 75%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3s;
+    }
+    &:nth-child(7) {
+      left: 35%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 7s;
+    }
+    &:nth-child(8) {
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      animation-delay: 15s;
+      animation-duration: 45s;
+    }
+    &:nth-child(9) {
+      left: 20%;
+      width: 15px;
+      height: 15px;
+      animation-delay: 2s;
+      animation-duration: 35s;
+    }
+    &:nth-child(10) {
+      left: 85%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 11s;
+    }
+  }
+}
+
+main {
+  /*   background-image: linear-gradient(to bottom, #ffce82, #ffbb70, #ffa761, #fe9256, #fd7c4f);
+ */
+  height: 100%;
+}
+@media (--pc) {
+}
+@media (--sp) {
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow-y: hidden;
+  }
+  .bob {
+    position: relative;
+    background: #f2f2f2;
+    border-radius: 50%;
+    animation: pulse 2s linear infinite;
+  }
+  .st {
+    z-index: 10;
+    &__head {
+      position: relative;
+      padding-top: vw(60);
+      padding-bottom: vw(155);
+      display: flex;
+      justify-content: center;
+      background-image: linear-gradient(to bottom, #ffce82, #ffbb70, #ffa761, #fe9256, #fd7c4f);
+
+      figure {
+        display: inline-block;
+        img {
+          width: vw(200);
+          height: vw(200);
+          border-radius: 50%;
+          margin: auto;
+          display: block;
+          border: 5px solid #fff;
+        }
+      }
+    }
+    &__middle {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto 0;
+      display: block;
+      border-top-right-radius: vw(80);
+      position: relative;
+      &::before {
+        content: '';
+        width: 100%;
+        height: vw(150);
+        position: absolute;
+        top: vw(-148);
+        left: 0;
+        background: url($url/bubble.svg) repeat-x;
+        background-position: top center;
+        background-size: 100% auto;
+        transform: rotate(180deg);
+      }
+
+      ul {
+        height: 100%;
+        padding: vw(42) 0 vw(80);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top-left-radius: vw(80);
+        /*  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+        /*    background-color: #f2f2f2; */
+        li {
+          display: block;
+          &:last-child {
+            a {
+              margin-bottom: 0;
+            }
+          }
+          a {
+            position: relative;
+            font-family: $fontchewy;
+            width: vw(480);
+            text-align: center;
+            display: block;
+            font-size: vw(32);
+            font-weight: 500;
+            color: #fff;
+            line-height: vw(110);
+            letter-spacing: vw(3.2);
+            background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+            border-radius: vw(50);
+            margin: 0 0 vw(62);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+            text-indent: vw(40);
+            .fa {
+              width: vw(40);
+              height: vw(40);
+              display: inline-block;
+              position: absolute;
+              left: vw(40);
+              top: 50%;
+              transform: translateY(-50%);
+              &.fab {
+                background: url($url/facebook.png) no-repeat;
+                background-size: contain;
+                background-position: center;
+              }
+              &.fag {
+                background: url($url/instagram.png) no-repeat;
+                background-size: contain;
+                background-position: center;
+              }
+              &.fas {
+                background: url($url/skype.png) no-repeat;
+                background-size: contain;
+                background-position: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

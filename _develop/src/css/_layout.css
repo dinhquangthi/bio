@@ -1,0 +1,31 @@
+@media (--pc) {
+  a[href^=tel] {
+    pointer-events: none;
+    text-decoration: none;
+  }
+  .show_sp {
+    display: none !important;
+  }
+  .root {
+    overflow: hidden;
+    min-width: 1200px;
+  }
+  .row {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (--sp) {
+  .show_pc {
+    display: none !important;
+  }
+  .root {
+    overflow: hidden;
+    min-width: 320px;
+  }
+  .row {
+    padding-left: vw(30);
+    padding-right: vw(30);
+  }
+}

@@ -1,0 +1,12 @@
+$state: cover;
+@define-mixin objectfit $state {
+  object-fit: $state;
+  font-family: 'object-fit: $state;';
+}
+
+/* Url */
+$url: /assets/images/;
+
+$fontplay: 'Playfair Display', serif;
+$fontalura: 'Allura', cursive;
+$fontchewy: 'Chewy', cursive;

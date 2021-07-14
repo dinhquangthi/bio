@@ -1,0 +1,37 @@
+extends ./utils/_base.pug
+
+block append stylesheet
+  link(rel="preconnect", href='https://fonts.googleapis.com')
+  link(rel="stylesheet", href='https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;500;700&display=swap')
+  link(rel="stylesheet", href='https://fonts.googleapis.com/css2?family=Chewy&display=swap')
+
+block main
+  ul.circles
+      li
+      li
+      li
+      li
+      li
+      li
+      li
+      li
+      li
+      li
+  .container.st 
+    .st__head
+      figure.bob
+       +img('sample.jpg','')(class="fit")
+    .st__middle
+      ul 
+        li 
+          a(href="#") 
+            i.fa.fab
+            | Facebook
+        li 
+          a(href="#") 
+            i.fa.fag
+            | Instagram
+        li 
+          a(href="#") 
+            i.fa.fas
+            | Skype
