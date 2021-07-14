@@ -151,6 +151,17 @@ main {
     background: #f2f2f2;
     border-radius: 50%;
     animation: pulse 2s linear infinite;
+    &::after {
+      content: "";
+      background: url($url/check.png) no-repeat;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 2px;
+      bottom: 30px;
+      opacity: .85;
+    }
   }
   .st {
     z-index: 10;
@@ -170,7 +181,7 @@ main {
           border-radius: 50%;
           margin: auto;
           display: block;
-          border: 5px solid #fff;
+          border: 6px solid #fff;
         }
       }
     }
@@ -184,9 +195,9 @@ main {
       &::before {
         content: '';
         width: 100%;
-        height: 270px;
+        height: 400px;
         position: absolute;
-        top: -260px;
+        top: -400px;
         left: 0;
         background: url($url/bubble.svg) repeat-x;
         background-position: top center;
@@ -220,19 +231,19 @@ main {
             font-weight: 500;
             color: #fff;
             line-height: 76px;
-            letter-spacing: vw(3.2);
+            letter-spacing: 2px;
             background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
             border-radius: 50px;
             margin: 0 0 40px;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-            transition: ease all .3s;
+            transition: all 0.3s cubic-bezier(.21,.44,.83,.74);
             &:hover {
               transform: translate(5px,-5px);
               box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
             }
             .fa {
-              width: 40px;
-              height: 40px;
+              width: 32px;
+              height: 32px;
               display: inline-block;
               position: absolute;
               left: 20px;
@@ -250,6 +261,11 @@ main {
               }
               &.fas {
                 background: url($url/skype.png) no-repeat;
+                background-size: contain;
+                background-position: center;
+              }
+              &.fap {
+                background: url($url/phone.png) no-repeat;
                 background-size: contain;
                 background-position: center;
               }
@@ -272,6 +288,17 @@ main {
     background: #f2f2f2;
     border-radius: 50%;
     animation: pulse 2s linear infinite;
+    &::after {
+      content: "";
+      background: url($url/check.png) no-repeat;
+      background-size: contain;
+      width: vw(32);
+      height: vw(32);
+      position: absolute;
+      right: vw(10);
+      bottom: vw(22);
+      opacity: .85;
+    }
   }
   .st {
     z-index: 10;
@@ -367,6 +394,11 @@ main {
               }
               &.fas {
                 background: url($url/skype.png) no-repeat;
+                background-size: contain;
+                background-position: center;
+              }
+              &.fap {
+                background: url($url/phone.png) no-repeat;
                 background-size: contain;
                 background-position: center;
               }
