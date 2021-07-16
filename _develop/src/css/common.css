@@ -116,7 +116,7 @@ main {
         animation-delay: 3s;
       }
       &:nth-child(7) {
-        left: 8%%;
+        left: 8%;
         width: 150px;
         height: 150px;
         animation-delay: 7s;
