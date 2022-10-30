@@ -1,0 +1,1 @@
+(self.webpackChunkfrontend_template=self.webpackChunkfrontend_template||[]).push([[826],{6067:function(n,t,e){"use strict";e.r(t),e.d(t,{default:function(){return o}});var o=function n(){!function(n,t){if(!(n instanceof t))throw new TypeError("Cannot call a class as a function")}(this,n),console.log("index")}}}]);
